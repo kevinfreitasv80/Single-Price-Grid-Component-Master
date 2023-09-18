@@ -1,15 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+:root{
+    --white: hsl(0, 0%, 100%);
+    --colorP: hsl(218, 22%, 67%);
+    --bgScreen: hsl(206, 47%, 93%);
+    --moneyBack: hsl(71, 73%, 54%);
+}
+html, body, button{
+    font-family: "Karla", sans-serif;
+}
 html, body{
     margin: 0;
     padding: 0;
-    font-family: "Karla", sans-serif;
-    background: hsl(206, 47%, 93%);
+    background: var(--bgScreen);
+    color: var(--colorP);
 }
-
 main{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 19.5em);
+    box-shadow: .5em 0 1em rgba(0, 0, 0, 0.081);
+    background: red;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+h1{
+    color: hsl(179, 62%, 43%);
+}
+span{
+    font-size: 2em;
+    margin-right: .5em;
+    font-weight: 700;
+}
+button{
+    width: 85%;
+    font-size: 1em;
+    color: var(--white);
+    padding: 1em;
+    border-radius: .3em;
+    border: none;
+    background: var(--moneyBack);
+}
+h3:not(.moneyBack), span, .fullAccess{
+    color: var(--white);
+}
+
+.joinCommu{
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 1em 1em 0 0;
+}
+.month, .whyUs{
+    grid-row: 2;
+}
+.joinCommu, .month, .whyUs{
+    padding: 1.5em 0 2em 2em;
+}
+.whyUs ul{
+    color: hsl(179, 52%, 80%);
+    font-size: .9em;
+}
+.price{
+    display: flex;
+    align-items: center;
+    color: hsl(179, 54%, 64%);
+}
+.moneyBack{
+    color: var(--moneyBack);
+}
+.joinCommu{
+    background: var(--white);
+}
+.month{
+    background: hsl(179, 61%, 44%);
+}
+.whyUs{
+    background: hsl(179, 47%, 52%);
 }
