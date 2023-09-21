@@ -22,8 +22,7 @@ main{
     transform: translate(-50%, -50%);
     display: grid;
     grid-template-columns: repeat(2, 19.5em);
-    box-shadow: .5em 0 1em rgba(0, 0, 0, 0.081);
-    background: red;
+    filter: drop-shadow(.5em 0 1em rgba(0, 0, 0, 0.081));
 }
 ul{
     padding: 0;
@@ -56,6 +55,9 @@ h3:not(.moneyBack), span, .fullAccess{
     grid-column-end: 3;
     border-radius: 1em 1em 0 0;
 }
+.month{
+    border-radius: 0 0 0 1em;
+}
 .month, .whyUs{
     grid-row: 2;
 }
@@ -82,4 +84,5 @@ h3:not(.moneyBack), span, .fullAccess{
 }
 .whyUs{
     background: hsl(179, 47%, 52%);
+    border-radius: 0 0 1em 0;
 }
