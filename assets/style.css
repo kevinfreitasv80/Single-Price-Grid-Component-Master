@@ -86,3 +86,29 @@ h3:not(.moneyBack), span, .fullAccess{
     background: hsl(179, 47%, 52%);
     border-radius: 0 0 1em 0;
 }
+
+@media (max-width: 665px) {
+    main{
+        grid-template-columns: 22em;
+        grid-template-rows: repeat(3, .9fr);
+    }
+    .whyUs{
+        grid-row: 3;
+    }
+    .joinCommu, .month, .whyUs{
+        padding: .5em 0 1em 2em;
+        border-radius: 0;
+    }
+    .joinCommu{
+        grid-column: 1;
+        border-radius: .5em .5em 0 0;
+    }
+    .whyUs{
+        border-radius: 0 0 .5em .5em;
+    }
+}
+@media (max-width: 370px) {
+    main{
+        grid-template-columns: 19em;
+    }
+}
